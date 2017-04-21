@@ -1,13 +1,15 @@
-package activitytest.example.com.coolweather.model;
+package activitytest.example.com.coolweather.db;
+
+import org.litepal.crud.DataSupport;
 
 /**
  * Created by Administrator on 2017/4/4 0004.
  */
 
-public class City {
+public class City extends DataSupport{
     private int id;
     private String cityName;
-    private String cityCode;
+    private int cityCode;
     private int provinceId;
 
     public int getId() {
@@ -26,11 +28,11 @@ public class City {
         this.cityName = cityName;
     }
 
-    public String getCityCode() {
+    public int getCityCode() {
         return cityCode;
     }
 
-    public void setCityCode(String cityCode) {
+    public void setCityCode(int cityCode) {
         this.cityCode = cityCode;
     }
 
